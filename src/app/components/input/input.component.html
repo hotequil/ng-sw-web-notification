@@ -1,0 +1,11 @@
+<div [formGroup]="form" class="input">
+    <label class="input__label"
+           [class]="required ? 'input__label--required' : ''"
+           [for]="id">{{ label }}</label>
+    <input [placeholder]="placeholder"
+           class="input__field"
+           [id]="id"
+           [required]="required"
+           [formControlName]="name"
+           [type]="type">
+</div>

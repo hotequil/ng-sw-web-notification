@@ -1,3 +1,17 @@
 <main class="main">
-
+    <form class="main__form" [formGroup]="form" name="form" (ngSubmit)="submit()">
+        <legend class="main__legend">Create your notification</legend>
+        <app-input placeholder="Put a title"
+                   name="title"
+                   [required]="true"
+                   [form]="form"
+                   label="Title">
+        </app-input>
+        <app-input placeholder="Put a body"
+                   name="body"
+                   [required]="true"
+                   [form]="form"
+                   label="Body">
+        </app-input>
+    </form>
 </main>

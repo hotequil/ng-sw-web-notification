@@ -41,12 +41,18 @@ html, body{
 
 :root{
     --space: 16px;
-    --default-font-size: 16px;
     --half-space: calc(var(--space) / 2);
+    --double-space: calc(var(--space) * 2);
+    --quadruple-space: calc(var(--space) * 4);
+    --default-font-size: 16px;
+    --small-font-size: 12px;
     --white: #fff;
     --black: #000;
     --grey: rgba(0, 0, 0, .56);
     --red: #e53935;
-    --border: 1px solid;
+    --light-red: rgba(229, 57, 53, 0.24);
+    --border: 2px solid;
     --max-size: 1200px;
+    --border-radius: 4px;
+    --time-transition: .25s;
 }

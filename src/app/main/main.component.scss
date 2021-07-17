@@ -2,7 +2,24 @@
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: var(--space);
+    padding: var(--quadruple-space) var(--space);
     max-width: var(--max-size);
-    background-color: black;
+
+    &__form{
+        display: flex;
+        width: 100%;
+        column-gap: var(--double-space);
+        row-gap: var(--double-space);
+        flex-wrap: wrap;
+
+        > *{
+            flex-grow: 1;
+
+            &.main__legend{
+                font-size: calc(var(--default-font-size) * 1.5);
+                font-weight: 500;
+                flex-basis: 100%;
+            }
+        }
+    }
 }

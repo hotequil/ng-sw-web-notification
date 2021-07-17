@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MainComponent } from './main.component';
+import { InputModule } from '../components/input/input.module';
 
 @NgModule({
     declarations: [
@@ -11,7 +13,9 @@ import { MainComponent } from './main.component';
         MainComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        ReactiveFormsModule,
+        InputModule
     ]
 })
 export class MainModule {}
