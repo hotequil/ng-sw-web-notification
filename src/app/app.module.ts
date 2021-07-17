@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppComponent } from './app.component';
+import { HeaderModule } from './header/header.module';
 
 @NgModule({
     declarations: [
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
     ],
     imports: [
         BrowserModule,
-        ServiceWorkerModule.register('sw.js', { enabled: true })
+        ServiceWorkerModule.register('sw.js', { enabled: true }),
+        HeaderModule
     ],
     providers: [],
     bootstrap: [AppComponent]
