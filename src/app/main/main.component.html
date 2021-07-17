@@ -13,5 +13,10 @@
                    [form]="form"
                    label="Body">
         </app-input>
+        <app-button type="submit"
+                    class="main__btn"
+                    [disabled]="form.invalid"
+                    text="Create">
+        </app-button>
     </form>
 </main>

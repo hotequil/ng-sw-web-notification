@@ -1,0 +1,30 @@
+.button{
+    border-radius: var(--border-radius);
+    border: var(--border) var(--red);
+    font-weight: 600;
+    color: var(--white);
+    padding: var(--half-space) var(--space);
+    background-color: var(--red);
+    font-size: var(--default-font-size);
+    transition: color var(--time-transition), background-color var(--time-transition), opacity var(--time-transition);
+    cursor: pointer;
+
+    &:hover, &:active, &:focus{
+        background-color: var(--white);
+        color: var(--red);
+    }
+
+    &:disabled{
+        border-color: var(--grey);
+        background: var(--light-grey);
+        color: var(--grey);
+        cursor: default;
+        pointer-events: none;
+        opacity: .5;
+
+        &:hover, &:active, &:focus{
+            background-color: inherit;
+            color: inherit;
+        }
+    }
+}

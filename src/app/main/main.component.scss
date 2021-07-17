@@ -16,9 +16,16 @@
             flex-grow: 1;
 
             &.main__legend{
-                font-size: calc(var(--default-font-size) * 1.5);
+                font-size: calc(var(--default-font-size) * 1.75);
                 font-weight: 500;
                 flex-basis: 100%;
+            }
+
+            &.main__btn{
+                flex-basis: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
             }
         }
     }

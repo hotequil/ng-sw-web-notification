@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { MainComponent } from './main.component';
 import { InputModule } from '../components/input/input.module';
+import { ButtonModule } from '../components/button/button.module';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { InputModule } from '../components/input/input.module';
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        InputModule
+        InputModule,
+        ButtonModule
     ]
 })
 export class MainModule {}

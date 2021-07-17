@@ -1,0 +1,9 @@
+<button [type]="type"
+        class="button"
+        (click)="!disabled && click()"
+        (keyup.enter)="!disabled && click()"
+        (keyup.space)="!disabled && click()"
+        [attr.aria-disabled]="disabled ? true : null"
+        [disabled]="disabled ? true : null">
+    {{ text }}
+</button>
