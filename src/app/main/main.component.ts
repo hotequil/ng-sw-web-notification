@@ -14,5 +14,7 @@ export class MainComponent{
 
     constructor(private fb: FormBuilder){}
 
-    submit(): void{}
+    submit(): void{
+        alert("it's need to be implemented");
+    }
 }
