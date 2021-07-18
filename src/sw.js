@@ -15,3 +15,10 @@ self.addEventListener('message', event => {
             }
         );
 });
+
+self.addEventListener('notificationclick', () => {
+    self.clients.matchAll().then((clients) => {
+        if(clients && clients.length)
+            clients[0].postMessage({ type: self.types.NOTIFICATION, clicked: true });
+    });
+});

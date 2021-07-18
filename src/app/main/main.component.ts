@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+
+import { Subscription } from 'rxjs';
 
 import { NotificationService } from '../notification/notification.service';
 
@@ -8,13 +10,21 @@ import { NotificationService } from '../notification/notification.service';
     templateUrl: './main.component.html',
     styleUrls: ['./main.component.scss']
 })
-export class MainComponent{
+export class MainComponent implements OnInit, OnDestroy{
     form = this.fb.group({
         title: [null, Validators.required],
         body: [null, Validators.required],
     });
 
+    private notificationReceivingSubscription!: Subscription;
+
     constructor(private fb: FormBuilder, private notificationService: NotificationService){}
+
+    ngOnInit(): void{
+        this.notificationReceivingSubscription = this.notificationService.receiving().subscribe(event => {
+            if(event?.data?.clicked) alert('Notification clicked');
+        });
+    }
 
     submit(): void{
         if(this.form.invalid) return;
@@ -22,5 +32,9 @@ export class MainComponent{
         this.notificationService.create(this.form.getRawValue());
 
         this.form.reset();
+    }
+
+    ngOnDestroy(): void{
+        this.notificationReceivingSubscription?.unsubscribe?.();
     }
 }
