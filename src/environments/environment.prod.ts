@@ -1,3 +1,7 @@
+import '../sw-event-types';
+
 export const environment = {
-  production: true
+    // @ts-ignore
+    SW_EVENT_TYPES: self.types,
+    production: true
 };

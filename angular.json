@@ -27,7 +27,8 @@
                         "tsConfig": "tsconfig.app.json",
                         "assets": [
                             "src/assets",
-                            "src/sw.js"
+                            "src/sw.js",
+                            "src/sw-event-types.js"
                         ],
                         "styles": [
                             "src/styles.scss"
@@ -108,7 +109,8 @@
                         "karmaConfig": "karma.conf.js",
                         "assets": [
                             "src/assets",
-                            "src/sw.js"
+                            "src/sw.js",
+                            "src/sw-event-types.js"
                         ],
                         "styles": [
                             "src/styles.scss"

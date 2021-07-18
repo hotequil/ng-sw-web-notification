@@ -2,8 +2,12 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import '../sw-event-types';
+
 export const environment = {
-  production: false
+    // @ts-ignore
+    SW_EVENT_TYPES: self.types,
+    production: false,
 };
 
 /*

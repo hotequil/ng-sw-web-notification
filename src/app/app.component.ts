@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { SwService } from './sw/sw.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'angular-sw-web-notification';
+export class AppComponent implements OnInit{
+    constructor(private swService: SwService){}
+
+    ngOnInit(): void{
+        this.swService.init();
+    }
 }
