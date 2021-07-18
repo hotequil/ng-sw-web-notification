@@ -7,4 +7,9 @@ It's necessary install the HTTP Server with `sudo npm i http-server -g` and run 
 
 ***
 
+## Production mode
+Run `ng build` to build the production mode.
+
+***
+
 **By: *hotequil***.
